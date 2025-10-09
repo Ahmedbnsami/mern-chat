@@ -144,17 +144,27 @@ export default function Chat(){
     }
     
     function sendFile(ev) {
+        const files = ev.target.files
+        if (!files || files.length === 0) {
+            console.warn("No file selected")
+            return
+        }
+        
+        const file = files[0]
         const reader = new FileReader()
-        reader.readAsDataURL(ev.target.files[0])
+
         reader.onload = () => {
             const fileData = {
-                name: ev.target.files[0].name,
+                name: file.name,
                 data: reader.result
-            };
-            console.log("File data to be sent:", fileData);
-            sendMessage(null, fileData);
+            }
+            console.log("File data to be sent:", fileData)
+            sendMessage(null, fileData)
         }
+
+        reader.readAsDataURL(file)
     }
+
 
     function handleChatSummarization() {
         if (!startTime || !endTime) {
