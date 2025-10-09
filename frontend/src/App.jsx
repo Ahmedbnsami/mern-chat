@@ -1,6 +1,7 @@
 import axios from "axios"
 import { UserContextProvider } from "./UserContext"
 import Routes from "./Routes"
+import LandingPage from "./LandingPage"
 
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
   axios.defaults.withCredentials = true
   return (
     <UserContextProvider>
-      <Routes />
+      <LandingPage />
     </UserContextProvider>
   )
 }
