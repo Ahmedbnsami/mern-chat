@@ -60,7 +60,7 @@ const server = app.listen(3000, () => {
   console.log("Server is running on port 3000")
 })
 
-const wss = new ws.WebSocketServer('wss://mern-chat-plum-six.vercel.app', { server })
+const wss = new ws.WebSocketServer({server})
 
 wss.on('connection', (connection, req) => {
 
