@@ -8,6 +8,7 @@ const jwt = require("jsonwebtoken")
 const fs = require("fs")
 
 const app = express()
+const PORT = process.env.PORT || 3000;
 
 const User = require("./models/user") 
 const messageModel = require("./models/message")
@@ -56,8 +57,8 @@ app.get("/people", async (req, res) => {
   res.json(users)
 })
 
-const server = app.listen(3000, () => {
-  console.log("Server is running on port 3000")
+const server = app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`)
 })
 
 const wss = new ws.WebSocketServer({server})
