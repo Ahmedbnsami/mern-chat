@@ -96,16 +96,6 @@ export default function LandingPage() {
                     </svg>
                     )}
                 </button>
-                <a
-                    className="px-6 py-2 rounded-xl font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg"
-                    style={{
-                    background: 'linear-gradient(135deg, oklch(0.4 0.2 264), oklch(0.76 0.2 264))',
-                    color: 'oklch(1 0.1 264)'
-                    }}
-                    onClick={handleClick}
-                >
-                    Get Started
-                </a>
                 </div>
             </div>
             </div>
