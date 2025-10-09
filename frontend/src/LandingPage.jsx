@@ -267,6 +267,239 @@ export default function LandingPage() {
             </div>
             </div>
         </section>
+        {/* Team Collaboration Section */}
+        <section className="py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div className="space-y-6">
+                <h2 className="text-4xl md:text-5xl font-bold" style={{
+                    color: darkMode ? 'oklch(0.96 0.1 264)' : 'oklch(0.15 0.2 264)'
+                }}>
+                    Collaborate with Your Team
+                </h2>
+                <p className="text-lg" style={{
+                    color: darkMode ? 'oklch(0.76 0.1 264)' : 'oklch(0.4 0.2 264)'
+                }}>
+                    Create channels, organize conversations, and keep everyone on the same page. Perfect for remote teams and distributed workforces.
+                </p>
+                <ul className="space-y-3">
+                    {['Unlimited channels', 'Thread conversations', '@mentions and notifications', 'File sharing and search'].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3">
+                        <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{
+                        background: 'linear-gradient(135deg, oklch(0.4 0.2 264), oklch(0.76 0.2 264))'
+                        }}>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white" className="w-4 h-4">
+                            <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+                        </svg>
+                        </div>
+                        <span style={{
+                        color: darkMode ? 'oklch(0.76 0.1 264)' : 'oklch(0.4 0.2 264)'
+                        }}>{item}</span>
+                    </li>
+                    ))}
+                </ul>
+                </div>
+                <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop" 
+                    alt="Team collaboration"
+                    className="w-full h-full object-cover"
+                />
+                </div>
+            </div>
+            </div>
+        </section>
+
+        {/* Security Section */}
+        <section className="py-20" style={{
+            backgroundColor: darkMode ? 'oklch(0.15 0.1 264)' : 'oklch(1 0.1 264)'
+        }}>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div className="rounded-2xl overflow-hidden shadow-2xl order-2 md:order-1">
+                <img 
+                    src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop" 
+                    alt="Security and encryption"
+                    className="w-full h-full object-cover"
+                />
+                </div>
+                <div className="space-y-6 order-1 md:order-2">
+                <h2 className="text-4xl md:text-5xl font-bold" style={{
+                    color: darkMode ? 'oklch(0.96 0.1 264)' : 'oklch(0.15 0.2 264)'
+                }}>
+                    Enterprise-Grade Security
+                </h2>
+                <p className="text-lg" style={{
+                    color: darkMode ? 'oklch(0.76 0.1 264)' : 'oklch(0.4 0.2 264)'
+                }}>
+                    Your conversations are protected with end-to-end encryption. We take your privacy seriously with industry-leading security measures.
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                    {[
+                    { label: 'End-to-end encryption', icon: '🔒' },
+                    { label: 'Two-factor authentication', icon: '🛡️' },
+                    { label: 'Data backup', icon: '💾' },
+                    { label: 'GDPR compliant', icon: '✓' }
+                    ].map((item, i) => (
+                    <div key={i} className="p-4 rounded-xl" style={{
+                        backgroundColor: darkMode ? 'oklch(0.1 0.1 264)' : 'oklch(0.96 0.1 264)',
+                        border: `1px solid ${darkMode ? 'oklch(0.3 0.2 264)' : 'oklch(0.7 0.2 264)'}`
+                    }}>
+                        <div className="text-2xl mb-2">{item.icon}</div>
+                        <div className="text-sm font-medium" style={{
+                        color: darkMode ? 'oklch(0.96 0.1 264)' : 'oklch(0.15 0.2 264)'
+                        }}>{item.label}</div>
+                    </div>
+                    ))}
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        {/* Mobile Experience Section */}
+        <section className="py-20">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+                <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{
+                color: darkMode ? 'oklch(0.96 0.1 264)' : 'oklch(0.15 0.2 264)'
+                }}>
+                Chat Anywhere, Anytime
+                </h2>
+                <p className="text-xl" style={{
+                color: darkMode ? 'oklch(0.76 0.1 264)' : 'oklch(0.4 0.2 264)'
+                }}>
+                Seamless experience across all your devices
+                </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+                <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                    src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=800&fit=crop" 
+                    alt="Mobile app"
+                    className="w-full h-80 object-cover"
+                />
+                <div className="p-6" style={{
+                    backgroundColor: darkMode ? 'oklch(0.15 0.1 264)' : 'oklch(1 0.1 264)'
+                }}>
+                    <h3 className="text-xl font-bold mb-2" style={{
+                    color: darkMode ? 'oklch(0.96 0.1 264)' : 'oklch(0.15 0.2 264)'
+                    }}>Mobile Apps</h3>
+                    <p style={{
+                    color: darkMode ? 'oklch(0.76 0.1 264)' : 'oklch(0.4 0.2 264)'
+                    }}>Native iOS and Android apps for messaging on the go</p>
+                </div>
+                </div>
+                <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=800&fit=crop" 
+                    alt="Desktop app"
+                    className="w-full h-80 object-cover"
+                />
+                <div className="p-6" style={{
+                    backgroundColor: darkMode ? 'oklch(0.15 0.1 264)' : 'oklch(1 0.1 264)'
+                }}>
+                    <h3 className="text-xl font-bold mb-2" style={{
+                    color: darkMode ? 'oklch(0.96 0.1 264)' : 'oklch(0.15 0.2 264)'
+                    }}>Desktop Apps</h3>
+                    <p style={{
+                    color: darkMode ? 'oklch(0.76 0.1 264)' : 'oklch(0.4 0.2 264)'
+                    }}>Powerful desktop applications for Windows, Mac, and Linux</p>
+                </div>
+                </div>
+                <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=800&fit=crop" 
+                    alt="Web app"
+                    className="w-full h-80 object-cover"
+                />
+                <div className="p-6" style={{
+                    backgroundColor: darkMode ? 'oklch(0.15 0.1 264)' : 'oklch(1 0.1 264)'
+                }}>
+                    <h3 className="text-xl font-bold mb-2" style={{
+                    color: darkMode ? 'oklch(0.96 0.1 264)' : 'oklch(0.15 0.2 264)'
+                    }}>Web Platform</h3>
+                    <p style={{
+                    color: darkMode ? 'oklch(0.76 0.1 264)' : 'oklch(0.4 0.2 264)'
+                    }}>Access your chats from any browser, anywhere</p>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="py-20" style={{
+            backgroundColor: darkMode ? 'oklch(0.15 0.1 264)' : 'oklch(1 0.1 264)'
+        }}>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+                <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{
+                color: darkMode ? 'oklch(0.96 0.1 264)' : 'oklch(0.15 0.2 264)'
+                }}>
+                Loved by Teams Worldwide
+                </h2>
+                <p className="text-xl" style={{
+                color: darkMode ? 'oklch(0.76 0.1 264)' : 'oklch(0.4 0.2 264)'
+                }}>
+                See what our users have to say
+                </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+                {[
+                {
+                    quote: "This chat app has revolutionized how our remote team communicates. The AI summaries save us hours every week.",
+                    author: "Sarah Chen",
+                    role: "Product Manager",
+                    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop"
+                },
+                {
+                    quote: "The file sharing is seamless, and the dark mode is perfect for late-night coding sessions. Best chat app we've used.",
+                    author: "Marcus Johnson",
+                    role: "Lead Developer",
+                    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop"
+                },
+                {
+                    quote: "Security was our top priority, and this platform delivers. End-to-end encryption with a beautiful, intuitive interface.",
+                    author: "Elena Rodriguez",
+                    role: "CTO",
+                    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop"
+                }
+                ].map((testimonial, i) => (
+                <div key={i} className="p-8 rounded-2xl shadow-lg" style={{
+                    backgroundColor: darkMode ? 'oklch(0.1 0.1 264)' : 'oklch(0.96 0.1 264)',
+                    border: `1px solid ${darkMode ? 'oklch(0.3 0.2 264)' : 'oklch(0.7 0.2 264)'}`
+                }}>
+                    <div className="flex items-center gap-4 mb-4">
+                    <img 
+                        src={testimonial.image}
+                        alt={testimonial.author}
+                        className="w-16 h-16 rounded-full object-cover"
+                    />
+                    <div>
+                        <div className="font-bold" style={{
+                        color: darkMode ? 'oklch(0.96 0.1 264)' : 'oklch(0.15 0.2 264)'
+                        }}>{testimonial.author}</div>
+                        <div className="text-sm" style={{
+                        color: darkMode ? 'oklch(0.76 0.1 264)' : 'oklch(0.4 0.2 264)'
+                        }}>{testimonial.role}</div>
+                    </div>
+                    </div>
+                    <p className="italic" style={{
+                    color: darkMode ? 'oklch(0.76 0.1 264)' : 'oklch(0.4 0.2 264)'
+                    }}>"{testimonial.quote}"</p>
+                    <div className="flex gap-1 mt-4">
+                    {[...Array(5)].map((_, i) => (
+                        <svg key={i} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="oklch(0.76 0.2 264)" className="w-5 h-5">
+                        <path fillRule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clipRule="evenodd" />
+                        </svg>
+                    ))}
+                    </div>
+                </div>
+                ))}
+            </div>
+            </div>
+        </section>
 
         {/* CTA Section */}
         <section className="py-20">
@@ -293,6 +526,33 @@ export default function LandingPage() {
             </div>
             </div>
         </section>
+
+        {/* CTA Section */}
+        <section className="py-20">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="rounded-3xl p-12 shadow-2xl" style={{
+                background: 'linear-gradient(135deg, oklch(0.4 0.2 264), oklch(0.76 0.2 264))'
+            }}>
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                Ready to Start Chatting?
+                </h2>
+                <p className="text-xl mb-8 text-white opacity-90">
+                Join thousands of users already enjoying seamless communication
+                </p>
+                <a
+                className="inline-block px-10 py-4 rounded-xl font-bold text-lg transition-all duration-200 hover:scale-105 hover:shadow-xl"
+                style={{
+                    backgroundColor: 'white',
+                    color: 'oklch(0.4 0.2 264)'
+                }}
+                onClick={handleClick}
+                >
+                Get Started Free
+                </a>
+            </div>
+            </div>
+        </section>
+
 
         {/* Footer */}
         <footer className="py-12 border-t" style={{
