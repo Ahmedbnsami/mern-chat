@@ -74,7 +74,7 @@ export default function LandingPage() {
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent'
                 }}>
-                    MernChat
+                    Chat App
                 </span>
                 </div>
                 <div className="flex items-center gap-4">
