@@ -326,11 +326,11 @@ export default function LandingPage() {
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent'
                 }}>
-                    MernChat
+                    Chat App
                 </span>
                 </div>
                 <p className="mb-4">Modern messaging for modern teams</p>
-                <p className="text-sm">© 2025 MernChat. All rights reserved.</p>
+                <p className="text-sm">© 2025 Chat App. All rights reserved.</p>
             </div>
             </div>
         </footer>
