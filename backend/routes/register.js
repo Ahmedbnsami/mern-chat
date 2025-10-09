@@ -14,7 +14,7 @@ router.post("/", async (req, res) => {
      })
     jwt.sign({id: createdUser._id, username}, process.env.JWT_SECRET, {}, (err, token) => {
         if (err) throw err
-        res.cookie("token", token, { httpOnly: true, sameSite: "lax", secure: false }).status(201).json({
+        res.cookie("token", token, { httpOnly: true, sameSite: "none", secure: true }).status(201).json({
             id: createdUser._id,
         })
     })
