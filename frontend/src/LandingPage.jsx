@@ -527,33 +527,6 @@ export default function LandingPage() {
             </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="rounded-3xl p-12 shadow-2xl" style={{
-                background: 'linear-gradient(135deg, oklch(0.4 0.2 264), oklch(0.76 0.2 264))'
-            }}>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Ready to Start Chatting?
-                </h2>
-                <p className="text-xl mb-8 text-white opacity-90">
-                Join thousands of users already enjoying seamless communication
-                </p>
-                <a
-                className="inline-block px-10 py-4 rounded-xl font-bold text-lg transition-all duration-200 hover:scale-105 hover:shadow-xl"
-                style={{
-                    backgroundColor: 'white',
-                    color: 'oklch(0.4 0.2 264)'
-                }}
-                onClick={handleClick}
-                >
-                Get Started Free
-                </a>
-            </div>
-            </div>
-        </section>
-
-
         {/* Footer */}
         <footer className="py-12 border-t" style={{
             backgroundColor: darkMode ? 'oklch(0.15 0.1 264)' : 'oklch(1 0.1 264)',
