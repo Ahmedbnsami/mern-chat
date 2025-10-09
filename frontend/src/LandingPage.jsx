@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import Routes from './Routes'
+import { useNavigate } from 'react-router-dom';
 
 export default function LandingPage() {
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(false);
+  const navigate = useNavigate();
+
   function handleClick() {
-    return(
-        <Routes />
-    )
+    navigate('/'); // Adjust the path as needed
   }
 
   const features = [
