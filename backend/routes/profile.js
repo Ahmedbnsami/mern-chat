@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
     return res.status(401).json({ message: "No token provided" })
   }
   if (token) {
-    jwt.verify(token, process.env.JWT_SECRET,  { httpOnly: true, sameSite: "none", secure: true }, (err, userData) => {
+    jwt.verify(token, process.env.JWT_SECRET, (err, userData) => {
       if (err) throw err
       res.json(userData)
     })

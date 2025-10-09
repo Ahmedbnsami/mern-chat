@@ -10,8 +10,8 @@ router.post("/", async (req, res) => {
     if (foundUser) {
         const passOk = bcrypt.compareSync(password, foundUser.password)
         if (passOk) {
-            jwt.sign({id: foundUser._id, username}, process.env.JWT_SECRET, { httpOnly: true, sameSite: "none", secure: true }, (err, token) => {
-                res.cookie('token', token).json({
+            jwt.sign({id: foundUser._id, username}, process.env.JWT_SECRET, {}, (err, token) => {
+                res.cookie('token', token, { httpOnly: true, sameSite: "none", secure: true }).json({
                     id: foundUser._id,
                 })
             })
