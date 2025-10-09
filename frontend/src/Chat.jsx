@@ -32,7 +32,7 @@ export default function Chat(){
     }, [])
 
     function connectToWs() {
-        const ws = new WebSocket("ws://mern-chat-production-e502.up.railway.app")
+        const ws = new WebSocket("wss://mern-chat-production-e502.up.railway.app")
         setWs(ws)
         ws.addEventListener("message", handleMessage)
         ws.addEventListener("close", () => {
